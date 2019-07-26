@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  form{
+    width: 300px;
+    margin-top: -10px;
+  }
+  form{ 
+    border: 3px solid rgb(248, 176, 21);
+    padding: 5px;
+  }
+ 
+  </style>
+</head>
+<body>
+  <h4>新增</h4>
+  <form action="http://127.0.0.1:3000/route/process_get" method="POST" >
+    account: <input type="text" name="id" >  <br>
+    password: <input type="text" name="psw" ><br>
+    phone: <input type="text" name="phone" ><br>
+    name: <input type="text" name="name" ><br>
+    <input type="submit" value="Submit" >
+  </form>
+   
+  <h4>刪除</h4>
+  <form action="http://127.0.0.1:3000/route/delete_get" method="POST" >
+    account: <input type="text" name="delaccount" >  <br>
+    name: <input type="text" name="delname" ><br>
+    phone: <input type="text" name="delphone" ><br>
+    <input type="submit" value="Submit" >
+  </form>
+
+  <h4>修改(只能更改password)</h4>
+  <form action="http://127.0.0.1:3000/route/updata_get" method="POST" >
+    <!-- id: <input type="text" name="upid"><br> -->
+    account: <input type="text" name="upaccount" > <br>
+    password: <input type="text" name="uppassword" ><br>
+    phone: <input type="text" name="upphone" ><br>
+    name: <input type="text" name="upname" ><br>
+    <input type="submit" value="Submit" >
+  </form>
+
+  <h4>查詢</h4>
+  <form action="http://127.0.0.1:3000/route/select_get" method="GET" >
+    account: <input type="text" name="selaccount" >  
+    <input type="submit" value="Submit" >
+  </form>
+
+  <h4>查詢All</h4>
+  <form action="http://127.0.0.1:3000/route/selectall_get" method="GET" >
+    
+    <input type="submit" value="Submit" >
+  </form>
+
+  
+</body>
+</html>
